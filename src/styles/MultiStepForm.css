@@ -9,9 +9,12 @@ body {
 }
 
 .multi-step-form-container {
-  max-width: 500px;
+  /* max-width: 800px; */
   margin: 0 auto;
   padding: 20px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .progress-div {
@@ -50,4 +53,15 @@ body {
   );
   transition: width 0.3s ease;
   border-radius: 5px; /* Ensure the inner bar also has rounded corners */
+}
+
+.form-wrapper {
+  display: flex;
+  max-width: 800px;
+  transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.form-content {
+  display: flex;
+  width: 400%; /* Adjust based on the number of forms */
 }

@@ -1,5 +1,7 @@
 .form-container {
-  width: 800px;
+  margin-right: 15px;
+  width: 750px;
+  transition: opacity 0.5s ease-in-out;
   max-width: 100%;
   background-color: #fff;
   border-radius: 10px;
@@ -8,6 +10,8 @@
   position: relative;
   padding: 30px; /* Increased padding for a more spacious look */
   box-sizing: border-box;
+  opacity: 0.5;
+  margin: 20px;
 }
 
 .form-container h2 {
@@ -108,4 +112,9 @@
 
 .form-group {
   margin-bottom: 15px;
+}
+
+.form-container.active {
+  opacity: 1;
+  margin: 10px;
 }

@@ -152,41 +152,51 @@ const MultiStepForm = () => {
           </div>
         </div>
       </div>
-
-      {step === 1 && (
-        <PersonalInfo
-          formData={formData}
-          handleChange={handleChange}
-          handleNext={handleNext}
-          errors={errors}
-        />
-      )}
-      {step === 2 && (
-        <AddressDetails
-          formData={formData}
-          handleChange={handleChange}
-          handleBack={handleBack}
-          handleNext={handleNext}
-          errors={errors}
-        />
-      )}
-      {step === 3 && (
-        <PaymentInfo
-          formData={formData}
-          handleChange={handleChange}
-          handleBack={handleBack}
-          handleNext={handleNext}
-          errors={errors}
-        />
-      )}
-      {step === 4 && (
-        <ReviewSubmit
-          formData={formData}
-          handleBack={handleBack}
-          handleSubmit={handleSubmit}
-          loading={loading}
-        />
-      )}
+      <div className="form-wrapper">
+        <div
+          className="form-content"
+          style={{ transform: `translateX(-${(step - 1) * 25}%)` }}
+        >
+          {/* {step === 1 && ( */}
+          <PersonalInfo
+            formData={formData}
+            handleChange={handleChange}
+            handleNext={handleNext}
+            errors={errors}
+            step={step}
+          />
+          {/* )} */}
+          {/* {step === 2 && ( */}
+          <AddressDetails
+            formData={formData}
+            handleChange={handleChange}
+            handleBack={handleBack}
+            handleNext={handleNext}
+            errors={errors}
+            step={step}
+          />
+          {/* )} */}
+          {/* {step === 3 && ( */}
+          <PaymentInfo
+            formData={formData}
+            handleChange={handleChange}
+            handleBack={handleBack}
+            handleNext={handleNext}
+            errors={errors}
+            step={step}
+          />
+          {/* )} */}
+          {/* {step === 4 && ( */}
+          <ReviewSubmit
+            formData={formData}
+            handleBack={handleBack}
+            handleSubmit={handleSubmit}
+            loading={loading}
+            step={step}
+          />
+          {/* )} */}
+        </div>
+      </div>
     </div>
   );
 };

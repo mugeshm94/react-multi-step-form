@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/Form.css";
 
 const AddressDetails = ({
+  step,
   formData,
   handleChange,
   handleBack,
@@ -9,7 +10,7 @@ const AddressDetails = ({
   errors,
 }) => {
   return (
-    <div className="form-container">
+    <div className={`form-container ${step === 2 ? "active" : ""}`}>
       <h2>Address Details</h2>
       <form>
         <div className="form-group">

@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/Form.css";
 
 const PaymentInfo = ({
+  step,
   formData,
   handleChange,
   handleBack,
@@ -18,7 +19,7 @@ const PaymentInfo = ({
     label: (currentYear + i).toString(),
   }));
   return (
-    <div className="form-container">
+    <div className={`form-container ${step === 3 ? "active" : ""}`}>
       <h2>Payment Information</h2>
       <form>
         <div className="form-group">

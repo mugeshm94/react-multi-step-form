@@ -1,9 +1,9 @@
 import React from "react";
 import "../../styles/Form.css";
 
-const PersonalInfo = ({ formData, handleChange, handleNext, errors }) => {
+const PersonalInfo = ({ step, formData, handleChange, handleNext, errors }) => {
   return (
-    <div className="form-container">
+    <div className={`form-container ${step === 1 ? "active" : ""}`}>
       <h2>Personal Information</h2>
       <form>
         <div className="form-group">
