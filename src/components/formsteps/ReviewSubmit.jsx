@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/ReviewSubmit.css";
 
-const ReviewSubmit = ({ formData, handleBack, handleSubmit }) => {
+const ReviewSubmit = ({ formData, handleBack, handleSubmit, loading }) => {
   const {
     name,
     email,
@@ -56,8 +56,12 @@ const ReviewSubmit = ({ formData, handleBack, handleSubmit }) => {
         <button onClick={handleBack} className="go-back-btn">
           GO BACK
         </button>
-        <button onClick={handleSubmit} className="submit-btn">
-          SUBMIT
+        <button
+          onClick={handleSubmit}
+          className="submit-btn"
+          disabled={loading}
+        >
+          {loading ? <span className="spinner"></span> : "SUBMIT"}
         </button>
       </div>
     </div>

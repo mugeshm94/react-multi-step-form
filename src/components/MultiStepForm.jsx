@@ -6,9 +6,10 @@ import ReviewSubmit from "./formsteps/ReviewSubmit";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/MultiStepForm.css";
+import { db, collection, addDoc } from "../firebase";
 
 const MultiStepForm = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(4);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,6 +24,7 @@ const MultiStepForm = () => {
     cvv: "",
   });
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const handleNext = () => {
     if (validateStep(step)) {
       setStep(step + 1);
@@ -103,22 +105,30 @@ const MultiStepForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    setLoading(true);
     if (validateStep(step)) {
-      toast.success(
-        <>
-          <div>Success!</div>
-          <div>Your details are protected with top-notch security.</div>
-        </>,
-        {
-          autoClose: 5000, // Adjust timing as needed
-          style: {
-            fontSize: "16px", // Customize font size if needed
-          },
-        }
-      );
+      try {
+        await addDoc(collection(db, "formDetails"), formData);
+        toast.success(
+          <>
+            <div>Success!</div>
+            <div>Your details are protected with top-notch security.</div>
+          </>,
+          {
+            autoClose: 5000,
+            style: {
+              fontSize: "16px",
+            },
+          }
+        );
+      } catch (error) {
+        console.log("error", error);
+        toast.error("Error submitting form: " + error.message);
+      } finally {
+        setLoading(false); // Set loading to false regardless of success or failure
+      }
     }
-    // submission logic
   };
 
   return (
@@ -174,6 +184,7 @@ const MultiStepForm = () => {
           formData={formData}
           handleBack={handleBack}
           handleSubmit={handleSubmit}
+          loading={loading}
         />
       )}
     </div>
