@@ -16,6 +16,7 @@ const AddressDetails = ({
         <div className="form-group">
           <label>Address</label>
           <input
+            disabled={step != 2}
             className={`address-text ${errors.address ? "error-input" : ""}`}
             type="text"
             name="address"
@@ -28,6 +29,7 @@ const AddressDetails = ({
         <div className="form-group">
           <label>City</label>
           <input
+            disabled={step != 2}
             type="text"
             name="city"
             placeholder="Enter city"
@@ -40,6 +42,7 @@ const AddressDetails = ({
         <div className="form-group">
           <label>State</label>
           <input
+            disabled={step != 2}
             type="text"
             name="state"
             placeholder="Choose your state"
@@ -52,6 +55,7 @@ const AddressDetails = ({
         <div className="form-group">
           <label>Postal Code</label>
           <input
+            disabled={step != 2}
             type="text"
             name="postalCode"
             placeholder="Enter postal code"

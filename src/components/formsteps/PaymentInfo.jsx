@@ -25,6 +25,7 @@ const PaymentInfo = ({
         <div className="form-group">
           <label>Card Number</label>
           <input
+            disabled={step != 3}
             type="text"
             name="cardNumber"
             placeholder="Enter 16 digit card number"
@@ -80,6 +81,7 @@ const PaymentInfo = ({
         <div className="form-group">
           <label>CVV</label>
           <input
+            disabled={step != 3}
             type="text"
             name="cvv"
             value={formData.cvv}
