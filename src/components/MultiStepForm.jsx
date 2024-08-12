@@ -9,7 +9,7 @@ import "../styles/MultiStepForm.css";
 import { db, collection, addDoc } from "../firebase";
 
 const MultiStepForm = () => {
-  const [step, setStep] = useState(4);
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
