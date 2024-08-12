@@ -1,0 +1,111 @@
+.form-container {
+  width: 800px;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  padding: 30px; /* Increased padding for a more spacious look */
+  box-sizing: border-box;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  text-align: left;
+}
+
+.address-text {
+  height: 100px;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%; /* Adjusted width to match design */
+  padding: 10px; /* Increased padding for input fields */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+.expiry-date-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.expiry-date-group select {
+  width: 48%; /* Matches the width of each select element */
+  color: #000000;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.go-back-btn,
+.next-btn {
+  padding: 10px 30px; /* Increased padding for a more prominent button size */
+  border-radius: 50px; /* Rounded corners to create a pill-shaped button */
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-flex; /* Center align text and icon */
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent; /* Ensure border is consistent */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+.go-back-btn {
+  background-color: white; /* White background */
+  color: #068d6d; /* Green text */
+  border-color: #068d6d; /* Green border */
+}
+
+.go-back-btn:hover {
+  background-color: #068d6d; /* Green background on hover */
+  color: white; /* White text on hover */
+}
+
+.next-btn {
+  background-color: #068d6d; /* Green background */
+  color: white; /* White text */
+  border-color: #068d6d; /* Green border */
+}
+.next-btn:hover {
+  background-color: #068d6d; /* Darker green on hover */
+}
+
+/* Add arrow icon for the next button */
+.next-btn::after {
+  content: "→"; /* Right arrow */
+  margin-left: 78px; /* Space between text and arrow */
+  font-size: 16px; /* Adjust arrow size */
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  text-align: justify;
+  margin: 0px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}

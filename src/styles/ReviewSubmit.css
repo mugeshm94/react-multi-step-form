@@ -1,0 +1,69 @@
+.review-submit-container {
+  max-width: 450px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-submit-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.review-section {
+  margin-bottom: 35px;
+}
+
+.review-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.review-section p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.review-note {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.go-back-btn,
+.submit-btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.go-back-btn {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.submit-btn {
+  background-color: #068d6d;
+  color: white;
+}
+
+.go-back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.submit-btn:hover {
+  background-color: #068d6d;
+}

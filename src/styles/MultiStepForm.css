@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e6e6e6;
+}
+
+.multi-step-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.progress-div {
+  height: 90px;
+  background-color: white;
+  align-content: center;
+  margin-bottom: 10px;
+  border-radius: 9px;
+}
+
+.progress-step-text {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.progress-bar {
+  margin: 10px;
+  width: 95%;
+  height: 10px;
+  background-color: #cec6c6;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid #5b5e6000; /* Blue border to match the image */
+}
+
+.progress-bar-inner {
+  height: 100%;
+  width: 75%;
+  background: repeating-linear-gradient(
+    45deg,
+    #068d6d,
+    #068d6d 10px,
+    #007b5e 10px,
+    #007b5e 20px
+  );
+  transition: width 0.3s ease;
+  border-radius: 5px; /* Ensure the inner bar also has rounded corners */
+}
